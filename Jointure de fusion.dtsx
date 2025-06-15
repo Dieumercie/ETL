@@ -1,0 +1,2778 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/11/2025 1:34:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LOULOU"
+  DTS:CreatorName="LOULOU\kalla"
+  DTS:DTSID="{BB2B004E-74A5-4820-B97A-A64854BDDF34}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Jointure de fusion"
+  DTS:PackageType="5"
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{3720AC26-C860-4BA9-996D-DA460B3F9F65}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BC619B3F-8723-426F-9A1C-9D4B7763E6EE}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\perso\Mes projets\ETL - SSIS\sortie1.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Locataire"
+              DTS:DTSID="{2772E077-B246-4A10-905A-8FF383D53496}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom"
+              DTS:DTSID="{387EBA49-7FC8-4E74-B4BE-59D258F4F61B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Prénom"
+              DTS:DTSID="{931C04B6-BCAA-440F-8FD8-312B88DEB2E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ville"
+              DTS:DTSID="{6309383B-3AC1-464E-877D-190BB0A18D3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Location"
+              DTS:DTSID="{BCBB67F0-16D7-4C03-957B-B48504515F3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bien"
+              DTS:DTSID="{682429B8-17A7-4208-BF27-AA938D04A196}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LoyerMensuel"
+              DTS:DTSID="{7CD9B2D1-D8E1-4887-8F73-E37F15A4158B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateDebut"
+              DTS:DTSID="{77DCF0A9-972D-40B5-9A00-509DCD0F56D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateFin"
+              DTS:DTSID="{61A3D099-4E5D-456A-96CF-5C6684ADD1E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StatutPaiement"
+              DTS:DTSID="{9FF9EE98-33F2-4490-ADCD-571F659480D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DureeContrat"
+              DTS:DTSID="{F2987DC7-E40A-4B97-B808-AF193751D68F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0A131F12-2238-4305-B06D-DA4562E2466D}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\perso\Mes projets\ETL - SSIS\Locataires.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Locataire"
+              DTS:DTSID="{1C3948B4-37E4-422D-80B2-C29204552495}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom"
+              DTS:DTSID="{C29007D6-468A-456A-BDC1-3D277698DAA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Prénom"
+              DTS:DTSID="{6AE4B278-8C4F-443A-ABB8-3D06617F5586}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ville"
+              DTS:DTSID="{C46B6D81-723D-4DA8-AFC5-EF6EA0F58625}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1DF60130-3BC7-4392-9B4D-E4DEF016763A}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\perso\Mes projets\ETL - SSIS\Locations.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Location"
+              DTS:DTSID="{7787E3E3-6D60-4E55-8154-5D8AF6549A25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_Locataire"
+              DTS:DTSID="{78EB2020-1890-4C32-8B44-A62F610CB12B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bien"
+              DTS:DTSID="{21D96190-75BF-4DE8-B4E4-F68B53338C7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LoyerMensuel"
+              DTS:DTSID="{6152687E-06A0-4B37-9CA1-E7E286D1A58C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateDebut"
+              DTS:DTSID="{EA421874-B572-4910-A2E1-13FD4A024389}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateFin"
+              DTS:DTSID="{D488EBC1-9262-46A0-BD40-5015DE4133A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StatutPaiement"
+              DTS:DTSID="{E220CDB9-0276-47F0-AB19-A8A775F11BAF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9234A722-EE71-4E2D-8113-1BE42A747B67}"
+      DTS:ObjectName="Gestionnaire de connexions Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\perso\Mes projets\ETL - SSIS\sortie1.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LOULOU.projects_db]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4A29B67B-3574-46FC-BEC7-E0AD09E3F676}"
+      DTS:ObjectName="LOULOU.projects_db">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LOULOU;Initial Catalog=projects_db;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Jointure de fusion-{4A29B67B-3574-46FC-BEC7-E0AD09E3F676}LOULOU.projects_db;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tâche de flux de données"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{F8E15306-E38A-4A3D-AADC-BEAFEB527307}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tâche de flux de données"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tâche de flux de données\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[DateDebut]"
+                      cachedDataType="date"
+                      cachedName="DateDebut"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateDebut]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[DateFin]"
+                      cachedDataType="date"
+                      cachedName="DateFin"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateFin]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[DureeContrat]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[DureeContrat]"
+                      name="DureeContrat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[DATEDIFF]("month",#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateDebut]},#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateFin]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("month",DateDebut,DateFin)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Conversion de données"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="Conversion de données"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[ID_Locataire]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Locataire"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Locataire]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Nom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Nom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Prénom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Prénom"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Prénom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Ville]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ville"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Ville]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[ID_Location]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Location"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Location]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[Bien]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Bien"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Bien]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[LoyerMensuel]"
+                      cachedDataType="r4"
+                      cachedName="LoyerMensuel"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[LoyerMensuel]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[DateDebut]"
+                      cachedDataType="date"
+                      cachedName="DateDebut"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateDebut]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[DateFin]"
+                      cachedDataType="date"
+                      cachedName="DateFin"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateFin]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[StatutPaiement]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StatutPaiement"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[StatutPaiement]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données].Columns[DureeContrat]"
+                      cachedDataType="i4"
+                      cachedName="DureeContrat"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DureeContrat]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of ID_Locataire]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of ID_Locataire]"
+                      name="Copy of ID_Locataire"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Locataire]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nom]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nom]"
+                      name="Copy of Nom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Nom]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Prénom]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Prénom]"
+                      name="Copy of Prénom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Prénom]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Ville]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Ville]"
+                      name="Copy of Ville"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Ville]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of ID_Location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of ID_Location]"
+                      name="Copy of ID_Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Location]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Bien]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Bien]"
+                      name="Copy of Bien"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Bien]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of LoyerMensuel]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of LoyerMensuel]"
+                      name="Copy of LoyerMensuel"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[LoyerMensuel]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DateDebut]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DateDebut]"
+                      name="Copy of DateDebut"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateDebut]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DateFin]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DateFin]"
+                      name="Copy of DateFin"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateFin]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of StatutPaiement]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of StatutPaiement]"
+                      name="Copy of StatutPaiement"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[StatutPaiement]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DureeContrat]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DureeContrat]"
+                      name="Copy of DureeContrat"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DureeContrat]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Destination de fichier plat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Destination de fichier plat"
+              localeId="1036"
+              name="Destination de fichier plat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les données remplaceront ou seront ajoutées au fichier de destination."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Spécifie le texte à enregistrer sur le fichier de destination avant d'enregistrer des données."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quand le qualificateur de texte est activé, spécifie si le qualificateur de texte dans les données écrites dans le fichier de destination va être échappé ou non."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Destination de fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                  hasSideEffects="true"
+                  name="Entrée de destination de fichier plat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ID_Locataire]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Locataire"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ID_Locataire]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Locataire]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Nom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Nom]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Nom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Prénom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Prénom"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Prénom]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Prénom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Ville]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ville"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Ville]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Ville]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ID_Location]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Location"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ID_Location]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Location]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Bien]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Bien"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Bien]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Bien]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[LoyerMensuel]"
+                      cachedDataType="r4"
+                      cachedName="LoyerMensuel"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[LoyerMensuel]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[LoyerMensuel]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[DateDebut]"
+                      cachedDataType="date"
+                      cachedName="DateDebut"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DateDebut]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateDebut]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[DateFin]"
+                      cachedDataType="date"
+                      cachedName="DateFin"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DateFin]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateFin]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[StatutPaiement]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StatutPaiement"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[StatutPaiement]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[StatutPaiement]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[DureeContrat]"
+                      cachedDataType="i4"
+                      cachedName="DureeContrat"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DureeContrat]"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DureeContrat]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="ID_Locataire" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Nom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Nom" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Prénom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Prénom" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Ville]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Ville" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ID_Location]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="ID_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Bien]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Bien" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[LoyerMensuel]"
+                      dataType="r4"
+                      name="LoyerMensuel" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DateDebut]"
+                      dataType="date"
+                      name="DateDebut" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DateFin]"
+                      dataType="date"
+                      name="DateFin" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[StatutPaiement]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="StatutPaiement" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[DureeContrat]"
+                      dataType="i4"
+                      name="DureeContrat" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Destination Excel"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Destination Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Destination Excel"
+              name="Destination Excel"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">Feuil1$</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Destination Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination Excel">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of ID_Locataire]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ID_Locataire"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[ID_Locataire]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of ID_Locataire]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of Nom]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Nom"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Nom]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Nom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of Prénom]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Prénom"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Prénom]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Prénom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of Ville]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Ville"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Ville]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Ville]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of ID_Location]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ID_Location"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[ID_Location]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of ID_Location]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of Bien]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Bien"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Bien]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of Bien]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of LoyerMensuel]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of LoyerMensuel"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[LoyerMensuel]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of LoyerMensuel]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of DateDebut]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of DateDebut"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[DateDebut]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DateDebut]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of DateFin]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of DateFin"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[DateFin]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DateFin]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of StatutPaiement]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of StatutPaiement"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[StatutPaiement]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of StatutPaiement]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].Columns[Copy of DureeContrat]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of DureeContrat"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[DureeContrat]"
+                      lineageId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données].Columns[Copy of DureeContrat]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[ID_Locataire]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID_Locataire" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Nom]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nom" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Prénom]"
+                      dataType="wstr"
+                      length="255"
+                      name="Prénom" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Ville]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ville" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[ID_Location]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[Bien]"
+                      dataType="wstr"
+                      length="255"
+                      name="Bien" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[LoyerMensuel]"
+                      dataType="wstr"
+                      length="255"
+                      name="LoyerMensuel" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[DateDebut]"
+                      dataType="wstr"
+                      length="255"
+                      name="DateDebut" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[DateFin]"
+                      dataType="wstr"
+                      length="255"
+                      name="DateFin" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[StatutPaiement]"
+                      dataType="wstr"
+                      length="255"
+                      name="StatutPaiement" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel].ExternalColumns[DureeContrat]"
+                      dataType="wstr"
+                      length="255"
+                      name="DureeContrat" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Destination Excel.Outputs[Sortie d'erreur de destination Excel]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination Excel"
+                  synchronousInputId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Outputs[Sortie d'erreur de destination Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination Excel.Outputs[Sortie d'erreur de destination Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination Excel.Outputs[Sortie d'erreur de destination Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination Excel.Outputs[Sortie d'erreur de destination Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Jointure de fusion"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Jointure de fusion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Combine deux flux de données triés en un seul à l'aide de la jointure FULL, LEFT ou INNER. Nous recommandons cette transformation lorsque les flux de données peuvent être triés au niveau de leurs sources."
+              name="Jointure de fusion"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de jointure à effectuer."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le nombre de colonnes dans la clé de tri."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs NULL sont traitées comme valeurs égales."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indique le nombre maximal de mémoires tampons demandées par entrée avant blocage."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion]"
+                  hasSideEffects="true"
+                  name="Entrée gauche de jointure de fusion">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[ID_Locataire]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Locataire"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[ID_Locataire]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[ID_Location]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Location"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[ID_Location]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[Bien]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Bien"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Bien]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[LoyerMensuel]"
+                      cachedDataType="r4"
+                      cachedName="LoyerMensuel"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[LoyerMensuel]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[DateDebut]"
+                      cachedDataType="date"
+                      cachedName="DateDebut"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DateDebut]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[DateFin]"
+                      cachedDataType="date"
+                      cachedName="DateFin"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DateFin]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[StatutPaiement]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StatutPaiement"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[StatutPaiement]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[DureeContrat]"
+                      cachedDataType="i4"
+                      cachedName="DureeContrat"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DureeContrat]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion]"
+                  hasSideEffects="true"
+                  name="Entrée droite de jointure de fusion">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion].Columns[ID_Locataire]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Locataire"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[ID_Locataire]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion].Columns[Nom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Nom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion].Columns[Prénom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Prénom"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Prénom]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion].Columns[Ville]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ville"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Ville]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion]"
+                  isSorted="true"
+                  name="Sortie de jointure de fusion">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Locataire]"
+                      name="ID_Locataire"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[ID_Locataire]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Nom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Nom]"
+                      name="Nom">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion].Columns[Nom]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Prénom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Prénom]"
+                      name="Prénom">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion].Columns[Prénom]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Ville]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Ville]"
+                      name="Ville">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion].Columns[Ville]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Location]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[ID_Location]"
+                      name="ID_Location">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[ID_Location]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Bien]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[Bien]"
+                      name="Bien">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[Bien]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[LoyerMensuel]"
+                      dataType="r4"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[LoyerMensuel]"
+                      name="LoyerMensuel">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[LoyerMensuel]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateDebut]"
+                      dataType="date"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateDebut]"
+                      name="DateDebut">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[DateDebut]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateFin]"
+                      dataType="date"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DateFin]"
+                      name="DateFin">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[DateFin]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[StatutPaiement]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[StatutPaiement]"
+                      name="StatutPaiement">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[StatutPaiement]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DureeContrat]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion].Columns[DureeContrat]"
+                      name="DureeContrat">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonne d'entrée associée à cette colonne de sortie"
+                          name="InputColumnID">#{Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion].Columns[DureeContrat]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\locataires"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="locataires"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\locataires.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[ID_Locataire]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]"
+                      name="ID_Locataire"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Nom]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[Nom]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Nom]"
+                      name="Nom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Prénom]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[Prénom]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Prénom]"
+                      name="Prénom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Ville]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[Ville]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Ville]"
+                      name="Ville"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="ID_Locataire" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[Nom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Nom" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[Prénom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Prénom" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].ExternalColumns[Ville]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Ville" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\locataires.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locataires.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\locations"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="locations"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\locations.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 3]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Location]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[ID_Location]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Location]"
+                      name="ID_Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[ID_Locataire]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]"
+                      name="ID_Locataire"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[Bien]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[Bien]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[Bien]"
+                      name="Bien"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[LoyerMensuel]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[LoyerMensuel]"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[LoyerMensuel]"
+                      name="LoyerMensuel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateDebut]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[DateDebut]"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateDebut]"
+                      name="DateDebut"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateFin]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[DateFin]"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateFin]"
+                      name="DateFin"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[StatutPaiement]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[StatutPaiement]"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[StatutPaiement]"
+                      name="StatutPaiement"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[ID_Location]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="ID_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="ID_Locataire" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[Bien]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Bien" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[LoyerMensuel]"
+                      dataType="r4"
+                      name="LoyerMensuel" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[DateDebut]"
+                      dataType="date"
+                      name="DateDebut" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[DateFin]"
+                      dataType="date"
+                      name="DateFin" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].ExternalColumns[StatutPaiement]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="StatutPaiement" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\locations.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\locations.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Multidiffusion"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multidiffusion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Distribue chaque ligne d'entrée à chaque ligne dans au moins une sortie. Par exemple, connectez votre flux de données pour effectuer une copie des données afin que certaines valeurs puissent être masquées avant de les partager avec des partenaires externes."
+              name="Multidiffusion">
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Multidiffusion.Inputs[Multidiffusion entrée 1]"
+                  name="Multidiffusion entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Multidiffusion.Outputs[Sortie de multidiffusion 3]"
+                  deleteOutputOnPathDetached="true"
+                  name="Sortie de multidiffusion 3"
+                  synchronousInputId="Package\Tâche de flux de données\Multidiffusion.Inputs[Multidiffusion entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Multidiffusion.Outputs[Sortie de multidiffusion 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Sortie de multidiffusion 1"
+                  synchronousInputId="Package\Tâche de flux de données\Multidiffusion.Inputs[Multidiffusion entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Multidiffusion.Outputs[Sortie de multidiffusion 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Sortie de multidiffusion 2"
+                  synchronousInputId="Package\Tâche de flux de données\Multidiffusion.Inputs[Multidiffusion entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Trier"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
+              name="Trier"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si la transformation de tri supprime les lignes comportant des valeurs de tri en double."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le nombre maximal de threads à utiliser pour le tri."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri]"
+                  name="Entrée de tri">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[ID_Location]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Location"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Location]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[ID_Locataire]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Locataire"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[Bien]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Bien"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[Bien]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[LoyerMensuel]"
+                      cachedDataType="r4"
+                      cachedName="LoyerMensuel"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[LoyerMensuel]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[DateDebut]"
+                      cachedDataType="date"
+                      cachedName="DateDebut"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateDebut]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[DateFin]"
+                      cachedDataType="date"
+                      cachedName="DateFin"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateFin]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[StatutPaiement]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StatutPaiement"
+                      lineageId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[StatutPaiement]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri].Columns[DureeContrat]"
+                      cachedDataType="i4"
+                      cachedName="DureeContrat"
+                      lineageId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[DureeContrat]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri]"
+                  isSorted="true"
+                  name="Sortie de tri">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[ID_Location]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[ID_Location]"
+                      name="ID_Location">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Location]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[ID_Locataire]"
+                      name="ID_Locataire"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Bien]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[Bien]"
+                      name="Bien">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[Bien]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[LoyerMensuel]"
+                      dataType="r4"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[LoyerMensuel]"
+                      name="LoyerMensuel">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[LoyerMensuel]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DateDebut]"
+                      dataType="date"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DateDebut]"
+                      name="DateDebut">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateDebut]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DateFin]"
+                      dataType="date"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DateFin]"
+                      name="DateFin">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[DateFin]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[StatutPaiement]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[StatutPaiement]"
+                      name="StatutPaiement">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat].Columns[StatutPaiement]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DureeContrat]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri].Columns[DureeContrat]"
+                      name="DureeContrat">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[DureeContrat]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Trier 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Trier;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Trie les données d'entrée en ordre croissant ou décroissant lorsque le tri ne peut pas être effectué à la source. Par exemple, triez les données de vente par 'id de client' avant leur enregistrement dans un fichier plat et leur diffusion dans un autre service. Remarque : nous ne recommandons pas cette transformation dans le cas de flux de données volumineux."
+              name="Trier 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si la transformation de tri supprime les lignes comportant des valeurs de tri en double."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le nombre maximal de threads à utiliser pour le tri."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Trier 1.Inputs[Entrée de tri]"
+                  name="Entrée de tri">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Inputs[Entrée de tri].Columns[ID_Locataire]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID_Locataire"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Inputs[Entrée de tri].Columns[Nom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Nom]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Inputs[Entrée de tri].Columns[Prénom]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Prénom"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Prénom]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Inputs[Entrée de tri].Columns[Ville]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ville"
+                      lineageId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Ville]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie les options de comparaison pour les données caractères."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Spécifie l'ordre de tri de la colonne."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri]"
+                  isSorted="true"
+                  name="Sortie de tri">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[ID_Locataire]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[ID_Locataire]"
+                      name="ID_Locataire"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[ID_Locataire]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Nom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Nom]"
+                      name="Nom">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Nom]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Prénom]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Prénom]"
+                      name="Prénom">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Prénom]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Ville]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri].Columns[Ville]"
+                      name="Ville">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie l'identificateur de traçabilité de la colonne d'entrée associé à cette colonne de sortie."
+                          name="SortColumnId">#{Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat].Columns[Ville]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
+              endId="Package\Tâche de flux de données\Trier.Inputs[Entrée de tri]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Tâche de flux de données\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
+              endId="Package\Tâche de flux de données\Destination Excel.Inputs[Entrée de destination Excel]"
+              name="Sortie de conversion de données"
+              startId="Package\Tâche de flux de données\Conversion de données.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de jointure de fusion]"
+              endId="Package\Tâche de flux de données\Multidiffusion.Inputs[Multidiffusion entrée 1]"
+              name="Sortie de jointure de fusion"
+              startId="Package\Tâche de flux de données\Jointure de fusion.Outputs[Sortie de jointure de fusion]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de multidiffusion 1]"
+              endId="Package\Tâche de flux de données\Conversion de données.Inputs[Entrée de conversion de données]"
+              name="Sortie de multidiffusion 1"
+              startId="Package\Tâche de flux de données\Multidiffusion.Outputs[Sortie de multidiffusion 1]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de multidiffusion 3]"
+              endId="Package\Tâche de flux de données\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+              name="Sortie de multidiffusion 3"
+              startId="Package\Tâche de flux de données\Multidiffusion.Outputs[Sortie de multidiffusion 3]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat]"
+              endId="Package\Tâche de flux de données\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Tâche de flux de données\locations.Outputs[Sortie de source de fichier plat]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat1]"
+              endId="Package\Tâche de flux de données\Trier 1.Inputs[Entrée de tri]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Tâche de flux de données\locataires.Outputs[Sortie de source de fichier plat]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de tri]"
+              endId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée gauche de jointure de fusion]"
+              name="Sortie de tri"
+              startId="Package\Tâche de flux de données\Trier.Outputs[Sortie de tri]" />
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de tri1]"
+              endId="Package\Tâche de flux de données\Jointure de fusion.Inputs[Entrée droite de jointure de fusion]"
+              name="Sortie de tri"
+              startId="Package\Tâche de flux de données\Trier 1.Outputs[Sortie de tri]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Tâche de flux de données"
+          TopLeft="81.6666622045969,16.4666665521595" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tâche de flux de données">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="100,41.6"
+          Id="Package\Tâche de flux de données\Trier"
+          TopLeft="99.1666612484391,161.199998879035" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Tâche de flux de données\Conversion de données"
+          TopLeft="338.749981491517,324.249998078991" />
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\Tâche de flux de données\Destination de fichier plat"
+          TopLeft="21.0416655170009,430.299997007747" />
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\Tâche de flux de données\Multidiffusion"
+          TopLeft="146.666658653154,334.53333100703" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Tâche de flux de données\Destination Excel"
+          TopLeft="267.708318706396,432.666663984789" />
+        <NodeLayout
+          Size="108,41.6"
+          Id="Package\Tâche de flux de données\Trier 1"
+          TopLeft="324.166648954982,165.533332182235" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Tâche de flux de données\Jointure de fusion"
+          TopLeft="134.999992623925,249.599998264313" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\Tâche de flux de données\locations"
+          TopLeft="89.166661794815,12.9999999095996" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Tâche de flux de données\Colonne dérivée"
+          TopLeft="89.1666617948151,90.9999993671974" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\Tâche de flux de données\locataires"
+          TopLeft="323.33331566718,90.1333327065574" />
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de multidiffusion 3]"
+          TopLeft="216.266658653154,376.13333100703">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-97.6249931361531,54.166666000717"
+              Start="0,0"
+              End="-97.6249931361531,46.666666000717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.0833330003585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.0833330003585"
+                    Point2="0,27.0833330003585"
+                    Point3="-4,27.0833330003585" />
+                  <mssgle:LineSegment
+                    End="-93.6249931361531,27.0833330003585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-93.6249931361531,27.0833330003585"
+                    Point2="-97.6249931361531,27.0833330003585"
+                    Point3="-97.6249931361531,31.0833330003585" />
+                  <mssgle:LineSegment
+                    End="-97.6249931361531,46.666666000717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de jointure de fusion]"
+          TopLeft="215.63332563854,291.199998264313">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.3333327427175"
+              Start="0,0"
+              End="0,35.8333327427175">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.8333327427175" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de colonne dérivée]"
+          TopLeft="166.366661794815,132.599999367197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.200000546376,28.5999995118379"
+              Start="0,0"
+              End="-17.200000546376,21.0999995118379">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.299999755919" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.299999755919"
+                    Point2="0,14.299999755919"
+                    Point3="-4,14.299999755919" />
+                  <mssgle:LineSegment
+                    End="-13.200000546376,14.299999755919" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.200000546376,14.299999755919"
+                    Point2="-17.200000546376,14.299999755919"
+                    Point3="-17.200000546376,18.299999755919" />
+                  <mssgle:LineSegment
+                    End="-17.200000546376,21.0999995118379" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de tri1]"
+          TopLeft="378.166648954982,207.133332182235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.833322997723,42.4666660820776"
+              Start="0,0"
+              End="-137.833322997723,34.9666660820776">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2277224249966" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2277224249966"
+                    Point2="0,25.2277224249966"
+                    Point3="-4,25.2277224249966" />
+                  <mssgle:LineSegment
+                    End="-133.833322997723,25.2277224249966" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.833322997723,25.2277224249966"
+                    Point2="-137.833322997723,25.2277224249966"
+                    Point3="-137.833322997723,29.2277224249966" />
+                  <mssgle:LineSegment
+                    End="-137.833322997723,34.9666660820776" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de tri]"
+          TopLeft="149.166661248439,202.799998879035">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.499998042153,46.7999993852775"
+              Start="0,0"
+              End="40.499998042153,39.2999993852775">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8019798328381" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.8019798328381"
+                    Point2="0,27.8019798328381"
+                    Point3="4,27.8019798328381" />
+                  <mssgle:LineSegment
+                    End="36.499998042153,27.8019798328381" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.499998042153,27.8019798328381"
+                    Point2="40.499998042153,27.8019798328381"
+                    Point3="40.499998042153,31.8019798328381" />
+                  <mssgle:LineSegment
+                    End="40.499998042153,39.2999993852775" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat1]"
+          TopLeft="381.549982311081,131.733332706557">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.7999994756778"
+              Start="0,0"
+              End="0,26.2999994756778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2999994756778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat]"
+          TopLeft="148.766661794815,54.5999999095996">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.6000000000001,36.3999994575978"
+              Start="0,0"
+              End="17.6000000000001,28.8999994575978">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.1999997287989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.1999997287989"
+                    Point2="0,18.1999997287989"
+                    Point3="4,18.1999997287989" />
+                  <mssgle:LineSegment
+                    End="13.6000000000001,18.1999997287989" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.6000000000001,18.1999997287989"
+                    Point2="17.6000000000001,18.1999997287989"
+                    Point3="17.6000000000001,22.1999997287989" />
+                  <mssgle:LineSegment
+                    End="17.6000000000001,28.8999994575978" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de multidiffusion 1]"
+          TopLeft="285.866658653154,355.33333100703">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.8833228383631,-10.2833329280385"
+              Start="0,0"
+              End="45.3833228383631,-10.2833329280385">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22.4416614191816,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.4416614191816,0"
+                    Point2="26.4416614191816,0"
+                    Point3="26.4416614191816,-4" />
+                  <mssgle:LineSegment
+                    End="26.4416614191816,-6.28333292803853" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.4416614191816,-6.28333292803853"
+                    Point2="26.4416614191816,-10.2833329280385"
+                    Point3="30.4416614191816,-10.2833329280385" />
+                  <mssgle:LineSegment
+                    End="45.3833228383631,-10.2833329280385" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de conversion de données]"
+          TopLeft="432.749981491517,365.849998078991">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85.4416627851211,66.8166659057975"
+              Start="0,0"
+              End="-85.4416627851211,59.3166659057975">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4083329528988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.4083329528988"
+                    Point2="0,33.4083329528988"
+                    Point3="-4,33.4083329528988" />
+                  <mssgle:LineSegment
+                    End="-81.4416627851211,33.4083329528988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.4416627851211,33.4083329528988"
+                    Point2="-85.4416627851211,33.4083329528988"
+                    Point3="-85.4416627851211,37.4083329528988" />
+                  <mssgle:LineSegment
+                    End="-85.4416627851211,59.3166659057975" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de flux de données\Destination Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
